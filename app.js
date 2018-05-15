@@ -7,9 +7,9 @@ var bodyParser = require('body-parser');
 var nunjucks = require("nunjucks");
 
 var home = require('./routes/home');
-var participant = require('./routes/participant');
-var newsclip = require('./routes/newsclip');
-var watchclip = require('./routes/watchclip');
+var company = require('./routes/company');
+var account = require('./routes/account');
+var manage = require('./routes/manage');
 var transaction = require('./routes/transaction');
 
 var app = express();
@@ -23,8 +23,7 @@ nunjucks.configure('template', {
 app.set('views', path.join(__dirname, 'template'));
 app.set('view engine', 'nunjucks');
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -32,9 +31,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', home);
-app.use('/participant', participant);
-app.use('/newsclip', newsclip);
-app.use('/watchclip', watchclip);
+app.use('/company', company);
+app.use('/account', account);
+app.use('/manage', manage);
 app.use('/transaction', transaction);
 
 // catch 404 and forward to error handler

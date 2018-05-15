@@ -6,8 +6,8 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res) {
-    console.log("clip: "+req.query);
-    res.render('newsclip.html', {clip: req.query});
+    console.log("account: "+req.query);
+    res.render('account.html', {account: req.query});
 });
 
 module.exports = router;

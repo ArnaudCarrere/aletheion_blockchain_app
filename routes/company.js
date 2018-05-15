@@ -6,8 +6,8 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res) {
-    console.log("user: "+req.query);
-    res.render('participant.html', {user: req.query});
+    console.log("company: "+req.query);
+    res.render('company.html', {company: req.query});
 });
 
 module.exports = router;

@@ -1,0 +1,22 @@
+<!-- company card -->
+<div class="col-sm-6">
+    <div id="{{ company.companyId | replace('@', '-') | replace('.', '-') }}" class="card companyCard"
+         style="background-color:#fff0f5; padding:5px; margin-top: 5px;">
+        <h4>{{ company.companyName }}</h4>
+        <p>Address : {{ company.address }}</p>
+        <p>SIRET : {{ company.siret }}</p>
+        <p>Touch ID : {{ company.touch }}</p>
+        <div>
+            <button data-company="{{ company.companyId }}" type="button"
+                    data-toggle="modal" data-target="#accountModal"
+                    class="btn btn-primary btn-block col-sm-12">Add Account</button>
+            <button data-company="{{ company.companyId }}" type="button"
+                    data-toggle="modal" data-target="#accountListModal"
+                    class="btn btn-info btn-block col-sm-12">Manage Accounts</button>
+            <button data-company="{{ company.companyId }}" type="button"
+                    data-toggle="modal" data-target="#companyUpdateModal"
+                    class="btn btn-warning btn-block col-sm-12">Update Company</button>
+        </div>
+    </div>
+</div>
+

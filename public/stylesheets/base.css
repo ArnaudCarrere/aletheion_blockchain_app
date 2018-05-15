@@ -22,12 +22,56 @@ a {
   background-color: transparent;
 }
 
+#companies_rows {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-height: 295px;
+  overflow: auto;
+}
+
+#accountTable thead {
+  display:block;
+}
+#accountTable tbody {
+  display:block;
+  height:234px;
+  overflow-y:scroll;
+}
+
+#accountTable thead tr th:nth-child(1) {
+  width:120px;
+}
+#accountTable thead tr th:nth-child(2) {
+  width:150px;
+}
+#accountTable thead tr th:nth-child(3) {
+  width:200px;
+}
+#accountTable thead tr th:nth-child(4) {
+  width:107px;
+}
+#accountTable tbody tr:first-child td:nth-child(1) {
+  width:120px;
+}
+#accountTable tbody tr:first-child td:nth-child(2) {
+  width:150px;
+}
+#accountTable tbody tr:first-child td:nth-child(3) {
+  width:200px;
+}
+#accountTable tbody tr:first-child td:nth-child(4) {
+  width:107px;
+}
+
+
 ul.transactions {
   list-style-type: none;
   margin: 0;
   padding: 0;
   width: 100%;
-  max-height: 400px;
+  max-height: 150px;
   overflow: auto;
 }
 

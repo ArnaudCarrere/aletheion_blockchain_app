@@ -1,0 +1,14 @@
+<!-- account table row card -->
+<tr class="default">
+    <td>{{ account.accountName }} </td>
+    <td>{{ account.iban }} </td>
+    <td>{{ account.status }} </td>
+    <td>
+        <button data-company="{{ account.company }}" data-account="{{ account.accountId }}"
+                type="button"
+                class="btn btn-success btn-block certify-btn" data-dismiss="modal">Certify</button>
+        <button data-company="{{ account.company }}" data-account="{{ account.accountId }}"
+                type="button"
+                class="btn btn-danger btn-block reject-btn" data-dismiss="modal">Reject</button>
+    </td>
+</tr>
