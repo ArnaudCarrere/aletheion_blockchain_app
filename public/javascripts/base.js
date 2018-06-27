@@ -78,12 +78,41 @@ function postCompanyData (postData) {
             var param = $.param(company);
             console.log(param);
             $('#companies_rows').append(nunjucks.render("company?"+param, {company: company}));
+            //postNewIdentity(company["companyId"]);
         },
         error: function (xhr, status) {
             // code run if request fails; raw request and status
             console.log("Sorry, there was a problem!");
         },
         complete: function (xhr, status) {  	// code to run regardless of success or failure
+            console.log("The request is complete!");
+        }
+    });
+}
+
+function postNewIdentity (companyId){
+    const identity = {
+        participant: 'org.acme.sample.Company#'+companyId,
+        userID: companyId,
+        options: {}
+    };
+    $.ajax({
+        url: "http://localhost:3000/api/system/identities/issue",
+        type: "POST",
+        dataType: "blob",
+        data: identity,
+        xhrFields: {
+            withCredentials: true
+        },
+
+        success: function (card) {
+            console.log(card);
+        },
+        error: function (xhr, status) {
+            // code run if request fails; raw request and status
+            console.log("Sorry, there was a problem!");
+        },
+        complete: function (xhr, status) {      // code to run regardless of success or failure
             console.log("The request is complete!");
         }
     });
@@ -606,10 +635,5 @@ $(document).ready(function() {
         postRejectedAccountData(postData);
     });
 
-    $(document).on('click', ".update-btn" , function() {
-        var company = $(this).attr("data-company");
-
-        updateCompanyData(company);
-    });
 });
 

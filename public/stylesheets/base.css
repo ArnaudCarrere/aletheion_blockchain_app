@@ -41,28 +41,28 @@ a {
 }
 
 #accountTable thead tr th:nth-child(1) {
-  width:120px;
+  width:108px;
 }
 #accountTable thead tr th:nth-child(2) {
-  width:150px;
+  width:128px;
 }
 #accountTable thead tr th:nth-child(3) {
-  width:200px;
+  width:253px;
 }
 #accountTable thead tr th:nth-child(4) {
-  width:107px;
+  width:88px;
 }
 #accountTable tbody tr:first-child td:nth-child(1) {
-  width:120px;
+  width:108px;
 }
 #accountTable tbody tr:first-child td:nth-child(2) {
-  width:150px;
+  width:128px;
 }
 #accountTable tbody tr:first-child td:nth-child(3) {
-  width:200px;
+  width:253px;
 }
 #accountTable tbody tr:first-child td:nth-child(4) {
-  width:107px;
+  width:88px;
 }
 
 
